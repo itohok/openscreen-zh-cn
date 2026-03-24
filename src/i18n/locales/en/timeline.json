@@ -1,0 +1,91 @@
+{
+	"buttons": {
+		"addZoom": "Add Zoom (Z)",
+		"suggestZooms": "Suggest Zooms from Cursor",
+		"autoAnimate": "Auto Animate",
+		"autoAnimateGenerate": "Generate Auto Zooms",
+		"addTrim": "Add Trim (T)",
+		"addAnnotation": "Add Annotation (A)",
+		"addSpeed": "Add Speed (S)"
+	},
+	"hints": {
+		"pressZoom": "Press Z to add zoom",
+		"pressTrim": "Press T to add trim",
+		"pressAnnotation": "Press A to add annotation",
+		"pressSpeed": "Press S to add speed"
+	},
+	"labels": {
+		"pan": "Pan",
+		"zoom": "Zoom",
+		"zoomItem": "Zoom {{index}}",
+		"trimItem": "Trim {{index}}",
+		"speedItem": "Speed {{index}}",
+		"annotationItem": "Annotation",
+		"imageItem": "Image",
+		"emptyText": "Empty text"
+	},
+	"emptyState": {
+		"noVideo": "No Video Loaded",
+		"dragAndDrop": "Drag and drop a video to start editing"
+	},
+	"autoAnimate": {
+		"title": "Auto Animate",
+		"description": "Generate smart zoom segments from cursor pauses, then fine-tune manually.",
+		"duration": "Segment duration",
+		"spacing": "Minimum spacing",
+		"previewCount": "{{count}} preview segment(s) ready",
+		"removePreview": "Remove this preview",
+		"lockPreview": "Lock this preview",
+		"unlockPreview": "Unlock this preview",
+		"sortByTime": "Sort by time",
+		"resolveOverlaps": "Resolve overlaps",
+		"overlapTrim": "Smart trim",
+		"overlapRemove": "Remove overlaps",
+		"shiftStep": "Shift step (ms)",
+		"shiftLeft": "Shift left {{step}}ms",
+		"shiftRight": "Shift right {{step}}ms",
+		"noUnlockedToApply": "No unlocked preview segments to apply",
+		"lockedSkippedHint": "Locked preview segments were skipped",
+		"cancelPreview": "Discard preview",
+		"applyUnlocked": "Apply unlocked",
+		"applyPreview": "Apply to timeline",
+		"presets": {
+			"title": "Presets",
+			"tutorial": "Tutorial",
+			"demo": "Demo",
+			"fast": "Fast"
+		},
+		"strength": {
+			"gentle": "Gentle",
+			"balanced": "Balanced",
+			"strong": "Strong"
+		}
+	},
+	"errors": {
+		"cannotPlaceZoom": "Cannot place zoom here",
+		"zoomExistsAtLocation": "Zoom already exists at this location or not enough space available.",
+		"zoomSuggestionUnavailable": "Zoom suggestion handler unavailable",
+		"noCursorTelemetry": "No cursor telemetry available",
+		"noCursorTelemetryDescription": "Record a screencast first to generate cursor-based suggestions.",
+		"noUsableTelemetry": "No usable cursor telemetry",
+		"noUsableTelemetryDescription": "The recording does not include enough cursor movement data.",
+		"noDwellMoments": "No clear cursor dwell moments found",
+		"noDwellMomentsDescription": "Try a recording with slower cursor pauses on important actions.",
+		"noAutoZoomSlots": "No auto-zoom slots available",
+		"noAutoZoomSlotsDescription": "Detected dwell points overlap existing zoom regions.",
+		"cannotPlaceTrim": "Cannot place trim here",
+		"trimExistsAtLocation": "Trim already exists at this location or not enough space available.",
+		"cannotPlaceSpeed": "Cannot place speed here",
+		"speedExistsAtLocation": "Speed region already exists at this location or not enough space available."
+	},
+	"success": {
+		"addedZoomSuggestions": "Added {{count}} cursor-based zoom suggestion",
+		"addedZoomSuggestionsPlural": "Added {{count}} cursor-based zoom suggestions",
+		"previewZoomSuggestions": "Prepared {{count}} auto-zoom preview",
+		"previewZoomSuggestionsPlural": "Prepared {{count}} auto-zoom previews",
+		"previewZoomSuggestionsSummary": "Prepared {{added}} new preview(s), kept {{locked}} locked",
+		"appliedZoomSuggestions": "Applied {{count}} auto-zoom segment",
+		"appliedZoomSuggestionsPlural": "Applied {{count}} auto-zoom segments",
+		"clearedZoomPreview": "Cleared auto-zoom preview"
+	}
+}

@@ -1,0 +1,76 @@
+// @see - https://www.electron.build/configuration/configuration
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "com.xiaoluo.recorder",
+  "asar": true,
+  "productName": "小骆录屏",
+  "npmRebuild": true,
+  "buildDependenciesFromSource": true,
+  "compression": "normal",
+  "directories": {
+    "output": "release/${version}"
+  },
+  "files": [
+    "dist",
+    "dist-electron",
+    "!*.png",
+    "!preview*.png",
+    "!*.md",
+    "!README.md",
+    "!CONTRIBUTING.md",
+    "!LICENSE"
+  ],
+  "extraResources": [
+    {
+      "from": "public/wallpapers",
+      "to": "assets/wallpapers"
+    },
+    {
+      "from": "public/openscreen.png",
+      "to": "assets/app-icon.png"
+    }
+  ],
+
+  "mac": {
+    "hardenedRuntime": false,
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "icon": "icons/icons/mac/icon.icns",
+    "artifactName": "${productName}-Mac-${arch}-${version}-Installer.${ext}",
+    "extendInfo": {
+      "NSAudioCaptureUsageDescription": "小骆录屏需要音频采集权限来录制系统音频。",
+      "NSMicrophoneUsageDescription": "小骆录屏需要麦克风权限来录制人声。",
+      "NSCameraUsageDescription": "小骆录屏需要摄像头权限来录制摄像头画面。",
+      "NSCameraUseContinuityCameraDeviceType": true,
+      "com.apple.security.device.audio-input": true
+    }
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "icon": "icons/icons/png",
+    "artifactName": "${productName}-Linux-${version}.${ext}",
+    "category": "AudioVideo"
+  },
+  "win": {
+    "target": [
+      "nsis",
+      "portable"
+    ],
+    "icon": "public/openscreen.ico",
+    "artifactName": "${productName}-Win-${arch}-${version}.${ext}",
+    "signAndEditExecutable": true
+  },
+  "portable": {
+    "artifactName": "${productName}-Win-${arch}-${version}-Portable.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}
