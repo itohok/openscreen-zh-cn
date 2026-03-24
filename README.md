@@ -63,6 +63,7 @@
 <p align="center">
   <img src="public/preview3.png" alt="录制界面" style="height: 300px; margin-right: 10px;" />
   <img src="public/preview4.png" alt="编辑界面" style="height: 300px;" />
+  <img src="public/preview5.png" alt="自动动画界面" style="height: 300px;" />
 </p>
 
 ---
