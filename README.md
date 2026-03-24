@@ -1,99 +1,160 @@
-> [!WARNING]
-> This is very much in beta and might be buggy here and there (but hope you have a good experience!).
+<div align="center">
 
-<p align="center">
-  <img src="public/openscreen.png" alt="OpenScreen Logo" width="64" />
-  <br />
-  <br />
-  <a href="https://deepwiki.com/siddharthvaddem/openscreen">
-    <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki" />
-  </a>
+<img src="public/openscreen.png" alt="小骆录屏 Logo" width="88" />
+
+# 小骆录屏 · OpenScreen 简体中文增强版
+
+**免费、开源、无水印的屏幕录制与编辑工具**  
+面向中文用户深度优化，录屏、剪辑、导出一站完成。
+
+<p>
+  <a href="https://github.com/itohok/openscreen-zh-cn/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/itohok/openscreen-zh-cn?style=for-the-badge" /></a>
+  <a href="https://github.com/itohok/openscreen-zh-cn/network/members"><img alt="GitHub forks" src="https://img.shields.io/github/forks/itohok/openscreen-zh-cn?style=for-the-badge" /></a>
+  <a href="https://github.com/itohok/openscreen-zh-cn/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/itohok/openscreen-zh-cn?style=for-the-badge" /></a>
+  <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge" /></a>
 </p>
 
-# <p align="center">OpenScreen</p>
-
-<p align="center"><strong>OpenScreen is your free, open-source alternative to Screen Studio (sort of).</strong></p>
-
-If you don't want to pay $29/month for Screen Studio but want a much simpler version that does what most people seem to need, making beautiful product demos and walkthroughs, here's a free-to-use app for you. OpenScreen does not offer all Screen Studio features, but covers the basics well!
-
-Screen Studio is an awesome product and this is definitely not a 1:1 clone. OpenScreen is a much simpler take, just the basics for folks who want control and don't want to pay. If you need all the fancy features, your best bet is to support Screen Studio (they really do a great job, haha). But if you just want something free (no gotchas) and open, this project does the job!
-
-OpenScreen is 100% free for personal and commercial use. Use it, modify it, distribute it. (Just be cool 😁 and give a shoutout if you feel like it !)
-
-<p align="center">
-	<img src="public/preview3.png" alt="OpenScreen App Preview 3" style="height: 320px; margin-right: 12px;" />
-	<img src="public/preview4.png" alt="OpenScreen App Preview 4" style="height: 320px; margin-right: 12px;" />
+<p>
+  <a href="https://github.com/itohok/openscreen-zh-cn/releases">⬇️ 下载最新版</a> ·
+  <a href="https://github.com/itohok/openscreen-zh-cn/issues">🐞 提交问题</a> ·
+  <a href="https://github.com/itohok/openscreen-zh-cn/issues/new/choose">💡 功能建议</a>
 </p>
 
-## Core Features
-- Record your whole screen or specific windows.
-- Add Automatic zooms or manual zooms (customizable depth levels).
-- Record microphone audio and system audio capture.
-- Customize the duration and position of zooms however you please.
-- Crop video recordings to hide parts.
-- Choose between wallpapers, solid colors, gradients or a custom background.
-- Motion blur for smoother pan and zoom effects.
-- Add annotations (text, arrows, images).
-- Trim sections of the clip.
-- Customize speed at different segments.
-- Export in different aspect ratios and resolutions.
-
-## Installation
-
-Download the latest installer for your platform from the [GitHub Releases](https://github.com/siddharthvaddem/openscreen/releases) page.
-
-### macOS
-
-If you encounter issues with macOS Gatekeeper blocking the app (since it does not come with a developer certificate), you can bypass this by running the following command in your terminal after installation:
-
-```bash
-xattr -rd com.apple.quarantine /Applications/Openscreen.app
-```
-
-Note: Give your terminal Full Disk Access in **System Settings > Privacy & Security** to grant you access and then run the above command.
-
-After running this command, proceed to **System Preferences > Security & Privacy** to grant the necessary permissions for "screen recording" and "accessibility". Once permissions are granted, you can launch the app.
-
-### Linux
-
-Download the `.AppImage` file from the releases page. Make it executable and run:
-
-```bash
-chmod +x Openscreen-Linux-*.AppImage
-./Openscreen-Linux-*.AppImage
-```
-
-You may need to grant screen recording permissions depending on your desktop environment.
-
-**Note:** If the app fails to launch due to a "sandbox" error, run it with --no-sandbox:
-```bash
-./Openscreen-Linux-*.AppImage --no-sandbox
-```
-
-### Limitations
-
-System audio capture relies on Electron's [desktopCapturer](https://www.electronjs.org/docs/latest/api/desktop-capturer) and has some platform-specific quirks:
-
-- **macOS**: Requires macOS 13+. On macOS 14.2+ you'll be prompted to grant audio capture permission. macOS 12 and below does not support system audio (mic still work).
-- **Windows**: Works out of the box.
-- **Linux**: Needs PipeWire (default on Ubuntu 22.04+, Fedora 34+). Older PulseAudio-only setups may not support system audio (mic should still works).
-
-## Built with
-- Electron
-- React
-- TypeScript
-- Vite
-- PixiJS
-- dnd-timeline
+</div>
 
 ---
 
-_I'm new to open source, idk what I'm doing lol. If something is wrong please raise an issue 🙏_
+## ✨ 为什么选择小骆录屏
 
-## Contributing
+- 🌏 **完整简体中文体验**：关键界面与交互文案全面中文化
+- 🎬 **录制 + 编辑一体化**：录完就能剪，避免多工具切换
+- ⚡ **轻量高效**：开箱即用，适合产品演示、课程录制、工作汇报
+- 🆓 **免费无水印**：个人与商业场景均可使用（遵循开源协议）
 
-Contributions are welcome! If you’d like to help out or see what’s currently being worked on, take a look at the open issues and the [project roadmap](https://github.com/users/siddharthvaddem/projects/3) to understand the current direction of the project and find ways to contribute.
+---
 
-## License
+## 🧩 核心功能
 
-This project is licensed under the [MIT License](./LICENSE). By using this software, you agree that the authors are not liable for any issues, damages, or claims arising from its use.
+- 录制整个屏幕或指定窗口
+- 麦克风 / 系统音频录制控制
+- 自动缩放与手动缩放（可调节深度）
+- 裁剪、标注（文字/箭头/图片）、速度调节
+- 自定义背景（壁纸 / 纯色 / 渐变 / 自定义）
+- 多比例导出，适配主流内容平台
+
+---
+
+## 📊 功能对比（快速了解）
+
+| 能力 | 小骆录屏（本项目） | 原始 OpenScreen | 说明 |
+|---|---|---|---|
+| 简体中文界面 | ✅ 深度优化 | ⚠️ 部分/原始语言 | 本项目重点增强方向 |
+| 屏幕录制 | ✅ | ✅ | 支持常见录制场景 |
+| 录后编辑 | ✅ | ✅ | 裁剪/标注/速度/缩放 |
+| 免费无水印 | ✅ | ✅ | 开源免费 |
+| 本地化交互优化 | ✅ | ⚠️ | 持续迭代中 |
+
+> 说明：本项目是基于上游仓库的中文增强分支，会持续同步上游优秀改动。
+
+---
+
+## 🖼️ 软件截图
+
+<p align="center">
+  <img src="public/preview3.png" alt="录制界面" style="height: 300px; margin-right: 10px;" />
+  <img src="public/preview4.png" alt="编辑界面" style="height: 300px;" />
+</p>
+
+---
+
+## 📦 下载与安装
+
+请前往 [Releases](https://github.com/itohok/openscreen-zh-cn/releases) 下载。
+
+### Windows
+
+- 下载 `小骆录屏-Win-x64-xxx.zip` 或安装包
+- 解压后运行 `小骆录屏.exe`
+
+> 若首次运行出现安全提示，请选择“仍要运行”。
+
+### macOS
+
+建议在 macOS 设备上自行构建，或下载后按系统提示授予录屏/麦克风权限。
+
+### Linux
+
+下载对应 AppImage 后授予可执行权限运行。
+
+---
+
+## 🚀 本地开发
+
+### 环境要求
+
+- Node.js 22.x
+- npm 10.x
+
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 开发运行
+
+```bash
+npm run dev
+```
+
+### 构建
+
+```bash
+npm run build-vite
+```
+
+### Windows 打包
+
+```bash
+npx electron-builder --win nsis portable
+```
+
+---
+
+## 🗂️ 更新日志（模板）
+
+> 发布新版本时建议按下列结构填写 Release：
+
+### `v1.2.1-zh-cn.1`（示例）
+
+- ✅ 新增：简体中文文案补全与交互细节优化
+- 🛠 修复：录制流程与快捷键相关问题
+- 🎨 优化：应用图标与打包体验
+- 📦 发布：Windows x64 版本
+
+---
+
+## 🤝 如何贡献
+
+欢迎 Issue / PR：
+
+1. Fork 本仓库
+2. 创建分支：`feat/xxx` 或 `fix/xxx`
+3. 提交代码并推送
+4. 发起 Pull Request
+
+---
+
+## 🙏 致谢
+
+本项目基于：
+
+- [siddharthvaddem/openscreen](https://github.com/siddharthvaddem/openscreen)
+
+感谢原作者与社区贡献者的优秀工作。
+
+---
+
+## 📄 License
+
+本项目遵循 [MIT License](./LICENSE)。
