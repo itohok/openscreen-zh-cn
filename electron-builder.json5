@@ -22,10 +22,6 @@
   ],
   "extraResources": [
     {
-      "from": "public/wallpapers",
-      "to": "assets/wallpapers"
-    },
-    {
       "from": "public/openscreen.png",
       "to": "assets/app-icon.png"
     }
@@ -64,7 +60,7 @@
     ],
     "icon": "public/openscreen.ico",
     "artifactName": "${productName}-Win-${arch}-${version}.${ext}",
-    "signAndEditExecutable": true
+    "signAndEditExecutable": false
   },
   "portable": {
     "artifactName": "${productName}-Win-${arch}-${version}-Portable.${ext}"

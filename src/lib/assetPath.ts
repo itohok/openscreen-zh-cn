@@ -25,6 +25,10 @@ export async function getAssetPath(relativePath: string): Promise<string> {
 				return `/${encodedRelativePath}`;
 			}
 
+			if (window.location?.protocol === "file:") {
+				return new URL(encodedRelativePath, window.location.href).toString();
+			}
+
 			if (window.electronAPI && typeof window.electronAPI.getAssetBasePath === "function") {
 				const base = await window.electronAPI.getAssetBasePath();
 				if (base) {

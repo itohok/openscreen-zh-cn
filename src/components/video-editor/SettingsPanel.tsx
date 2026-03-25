@@ -41,6 +41,7 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useScopedT } from "@/contexts/I18nContext";
+import zanshangAsset from "@/assets/zanshang.jpg";
 import { getAssetPath } from "@/lib/assetPath";
 import { WEBCAM_LAYOUT_PRESETS } from "@/lib/compositeLayout";
 import type { ExportFormat, ExportQuality, GifFrameRate, GifSizePreset } from "@/lib/exporter";
@@ -242,16 +243,13 @@ export function SettingsPanel({
 		let mounted = true;
 		(async () => {
 			try {
-				const [rewardPath, qrPath] = await Promise.all([
-					getAssetPath("wallpapers/zanshang.jpg"),
-					getAssetPath("wallpapers/qrcode.jpg"),
-				]);
+				const qrPath = await getAssetPath("wallpapers/qrcode.jpg");
 				if (!mounted) return;
-				setRewardCodePath(rewardPath);
+				setRewardCodePath(zanshangAsset);
 				setOfficialQrPath(qrPath);
 			} catch {
 				if (!mounted) return;
-				setRewardCodePath("/wallpapers/zanshang.jpg");
+				setRewardCodePath(zanshangAsset);
 				setOfficialQrPath("/wallpapers/qrcode.jpg");
 			}
 		})();
@@ -285,7 +283,7 @@ export function SettingsPanel({
 	const [showCropModal, setShowCropModal] = useState(false);
 	const [donateDialogOpen, setDonateDialogOpen] = useState(false);
 	const [feedbackDialogOpen, setFeedbackDialogOpen] = useState(false);
-	const [rewardCodePath, setRewardCodePath] = useState<string>("/wallpapers/zanshang.jpg");
+	const [rewardCodePath, setRewardCodePath] = useState<string>(zanshangAsset);
 	const [officialQrPath, setOfficialQrPath] = useState<string>("/wallpapers/qrcode.jpg");
 	const cropSnapshotRef = useRef<CropRegion | null>(null);
 	const [cropAspectLocked, setCropAspectLocked] = useState(false);
